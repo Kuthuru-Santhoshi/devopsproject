@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/Kuthuru-Santhoshi/devopsproject'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t html-app .'
@@ -23,7 +17,7 @@ pipeline {
 
         stage('Push to DockerHub') {
             steps {
-                sh 'docker push  santhoshi136/html-app:latest'
+                sh 'docker push santhoshi136/html-app:latest'
             }
         }
 
