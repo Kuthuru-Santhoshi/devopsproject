@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'
+                git 'https://github.com/Kuthuru-Santhoshi/devopsproject'
             }
         }
 
@@ -17,13 +17,13 @@ pipeline {
 
         stage('Tag Image') {
             steps {
-                sh 'docker tag html-app yourdockerhubusername/html-app:latest'
+                sh 'docker tag html-app santhoshi136/html-app:latest'
             }
         }
 
         stage('Push to DockerHub') {
             steps {
-                sh 'docker push yourdockerhubusername/html-app:latest'
+                sh 'docker push  santhoshi136/html-app:latest'
             }
         }
 
